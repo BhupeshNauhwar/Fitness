@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/trainer.css">
+    <style>
+       
+        .exercise-list {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .exercise-container {
+            margin-bottom: 20px;
+        }
+
+        .exercise-items {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .exercise-item {
+            flex: 0 0 calc(50% - 20px);
+            margin-right: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .exercise-item:last-child {
+            margin-right: 0;
+        }
+
+        .exercise-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .exercise-details h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .exercise-details p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar-container">
+        <a class="logo">Fitness Guide</a>
+        <nav>
+            <ul class="menu-items">
+                <li class="nav-item">
+                    <a class="active nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-section">About us</a>
+                  </li>
+                 
+                <form action="/logout" class="form" method="get">
+                    <li class="nav-item">
+                        <button class="nav-link">LogOut</button>
+                    </li>
+                </form>
+            </ul>
+            <img src="/images/icon/moon.png" id="icon1">
+        </nav>
+    </div>
+</header>
+
+<section class="exercise-list">
+    
+    <% exerciseData.forEach(bodyPart => { %>
+    <h2><%= bodyPart.name %></h2>
+    <div class="exercise-items">
+        <% bodyPart.exercises.forEach(exercise => { %>
+        <div class="exercise-item">
+            <img src="<%= exercise.imageUrl %>" alt="<%= exercise.name %>" class="exercise-image">
+            <div class="exercise-details">
+                <h3><%= exercise.name %></h3>
+                <p><%= exercise.description %></p>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+    <% }); %>
+</section>
+
+<footer id="about-section">
+    <section>
+      <address title="company address" class="center">
+        <h4>Fitify Fitness</h4>
+        <p>
+          <i class="fa-solid fa-location-dot"></i> About <span>
+            </span
+          >
+        </p>
+        <p><i class="fa-solid fa-phone"></i> Teams</p>
+        <a href="care@fitify.co.in"
+          ><i class="fa-solid fa-envelope"></i> Terms and conditions </a
+        >
+      </address>
+
+      <div class="center">
+        <h4> Become a Partner </h4>
+        <ul class="center">
+          <li><a href="">+91 987654321</a></li>
+          <li><a href="">care@fitify.co.in</a></li>
+          <li><a href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="social media handles" title="social medial handles">
+      <h4> 2024 fitify.co.in | All Rights</h4>
+      <ul>
+        <li>
+          <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+
+<script>
+  var icon1 = document.getElementById("icon1");
+
+  icon1.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+      icon1.src = "images/icon/sun.png";
+    }else{
+      icon1.src = "images/icon/moon.png";
+    }
+
+  }
+
+</script>  
+
+</body>
+</html>

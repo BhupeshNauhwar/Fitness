@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="price.css">
+    <title>Member subscription price</title>
+    
+</head>
+<body>
+
+    <header>
+        <div class="navbar-container">
+            <a class="logo">Fitness Guide</a>
+            <nav>
+                <ul class="menu-items">
+                    <li class="nav-item">
+                        <a class="active nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-section">About us</a>
+                      </li>
+                     
+                   
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    
+    
+    <h1 class="main-heading">Membership Plans</h1>
+    <section class="price-section">
+        <div class="box1">
+           <h1>BASIC</h1>
+           <div class="description">
+                <p class="price">Rs. 200 <span>per month</span></p>
+                <ul>
+                    <li><img src="../images/icon/icons8-check-mark-48.png" alt="check logo">Infrared Yoga</li>
+                    <li><img src="../images/icon/icons8-cross-mark-48.png" alt="cross logo"> Cardio Desk</li>
+                    <li><img src="../images/icon/icons8-cross-mark-48.png" alt="cross logo">Free Weights</li>
+                    <li><img src="../images/icon/icons8-cross-mark-48.png" alt="cross logo">Strength training machines</li>
+                    <li><img src="../images/icon/icons8-cross-mark-48.png" alt="cross logo">Group fitness classes</li>
+                </ul>
+               
+            </div> 
+        </div>
+
+        <div class="box2">
+            <h1>STANDARD</h1>
+            <div class="description">
+                <p class="price">Rs. 500 <span>per month</span></p>
+                <ul>
+                    <li><img src="../images/icon/icons8-check-mark-48.png" alt="check logo">Infrared Yoga</li>
+                    <li><img src="../images/icon/icons8-check-mark-48.png" alt="check logo"> Cardio Desk</li>
+                    <li><img src="../images/icon/icons8-check-mark-48.png" alt="check logo">Free Weights</li>
+                    <li><img src="../images/icon/icons8-cross-mark-48.png" alt="cross logo">Strength training machines</li>
+                    <li><img src="../images/icon/icons8-cross-mark-48.png" alt="cross logo">Group fitness classes</li>
+                </ul>
+               
+            </div>
+        </div>
+
+        <div class="box3">
+            <h1>PREMIUM</h1>
+            <div class="description">
+                <p class="price">Rs. 900 <span>per month</span></p>
+                <ul>
+                    <li><img src="../images/icon/icons8-check-mark-48.png" alt="check logo">Infrared Yoga</li>
+                    <li><img src="../images/icon/icons8-check-mark-48.png" alt="check logo"> Cardio Desk</li>
+                    <li><img src="../images/icon/icons8-check-mark-48.png" alt="check logo">Free Weights</li>
+                    <li><img src="../images/icon/icons8-check-mark-48.png" alt="check logo">Strength training machines</li>
+                    <li><img src="../images/icon/icons8-check-mark-48.png" alt="check logo">Group fitness classes</li>
+                </ul>
+               
+            </div>
+        </div>
+    </section>
+    <form action="/plans" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="plan">Select a Plan:</label><br>
+        <select id="plan" name="selected_plan">
+            <option name="basic" value="basic">Basic</option>
+            <option name="standard" value="standard">Standard</option>
+            <option name="premium" value="premium">Premium</option>
+        </select><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <footer id="about-section">
+        <section>
+          <address title="company address" class="center">
+            <h4>Fitify Fitness</h4>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> About <span>
+                </span
+              >
+            </p>
+            <p><i class="fa-solid fa-phone"></i> Teams</p>
+            <a href="care@fitify.co.in"
+              ><i class="fa-solid fa-envelope"></i> Terms and conditions </a
+            >
+          </address>
+  
+          <div class="center">
+            <h4> Become a Partner </h4>
+            <ul class="center">
+              <li><a href="">+91 987654321</a></li>
+              <li><a href="">care@fitify.co.in</a></li>
+              <li><a href="">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </section>
+  
+        <section class="social media handles" title="social medial handles">
+          <h4> 2024 fitify.co.in | All Rights</h4>
+          <ul>
+            <li>
+              <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </section>
+      </footer>
+  
+  <script>
+      var icon1 = document.getElementById("icon1");
+  
+      icon1.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+          icon1.src = "images/icon/sun.png";
+        }else{
+          icon1.src = "images/icon/moon.png";
+        }
+  
+      }
+  
+  </script>  
+    
+</body>
+</html>
